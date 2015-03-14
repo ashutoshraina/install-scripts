@@ -6,8 +6,8 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 #Elementary
 sudo apt-add-repository -y ppa:versable/elementary-update
-#Skype
-sudo apt-add-repository -y "deb http://archive.canonical.com/ubuntu/ precise partner"
+#Sublime
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
 #Git
 sudo add-apt-repository -y ppa:git-core/ppa
 #node
@@ -37,7 +37,6 @@ echo "Install stuff"
 sudo apt-get -y install google-chrome-stable
 sudo apt-get -y install elementary-desktop elementary-tweaks
 sudo apt-get -y install wingpanel-slim indicator-synapse
-sudo apt-get -y install skype
 sudo apt-get -y install git
 sudo apt-get -y install nodejs
 sudo apt-get install -y mono-devel
@@ -72,19 +71,12 @@ sh kvminstall.sh
 source ~/.k/kvm/kvm.sh
 kvm upgrade
 
-#atom
-echo "atom"
-cd ~/Downloads
-mkdir atom
-cd atom
-wget https://github.com/atom/atom/releases/download/v0.177.0/atom-amd64.deb
-sudo dpkg --install atom-amd64.deb
-
-apm install atom-beautify atom-typescript-tools bezier-curve-editor color-picker css-snippets editorconfig emmet autocomplete-plus omnisharp-atom language-cshtml language-css-plus language-typescript less-than-slash linter-tslint seti-syntax seti-ui minimap atom-save-all
+#sublime
+echo "sublime"
+sudo apt-get install sublime-text-installer
 
 #versions
 echo "versions"
-atom -v
 mono --version
 node -v
 npm -v
