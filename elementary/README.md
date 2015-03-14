@@ -1,7 +1,7 @@
 # elementaryos install script
 
 ```bash
-wget https://raw.githubusercontent.com/luisrudge/install-scripts/master/elementary/install.sh
+wget https://raw.githubusercontent.com/ashutoshraina/install-scripts/master/elementary/install.sh
 chmod +x install.sh
 ./install.sh
 ```
